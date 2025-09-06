@@ -55,7 +55,7 @@ nav a:hover::after {
 }
 
 /* Main Content */
-.main-content {
+.main-content2 {
     max-width: 900px;
     margin: 50px auto 0 auto;
     background-color: rgba(255,255,255,0.97);

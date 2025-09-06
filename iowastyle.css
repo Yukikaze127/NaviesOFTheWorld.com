@@ -1,10 +1,10 @@
-/* General Styles */
 body {
     margin: 0;
     font-family: 'Segoe UI', Arial, sans-serif;
     background: linear-gradient(135deg, #0a2740 0%, #1b3b5a 100%);
     min-height: 100vh;
 }
+
 
 /* Header & Navigation */
 #header {
@@ -54,73 +54,87 @@ nav a:hover::after {
     width: 100%;
 }
 
+/* Main Content */
+.main-content {
+    max-width: 900px;
+    margin: 50px auto 0 auto;
+    background-color: rgba(255,255,255,0.97);
+    padding: 40px 32px 32px 32px;
+    border-radius: 10px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.10);
+    border: 3px solid #ffd700; /* Yellow border */
+    font-weight: 700; /* Make all text inside main-content bolder */
+    font-family: Arial, 'Segoe UI', sans-serif;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+    font-family: Arial, 'Segoe UI', sans-serif;
+    color: #0a2740;
+    text-align: center;
+    font-weight: 800;
+    margin-bottom: 0.3em;
+    letter-spacing: 2px;
+}
+h1 {
+    font-size: 2.5em;
+}
+h2 {
+    color: #1b3b5a;
+    font-size: 2em;
+    margin: 32px 0 18px 0;
+}
+.subtitle {
+    text-align: center;
+    color: #1b3b5a;
+    font-size: 1.3em;
+    margin-bottom: 1.5em;
+    font-weight: 700;
+    font-family: Arial, 'Segoe UI', sans-serif;
+}
+
+/* Paragraphs and Lists */
+.main-content p,
+.main-content ul,
+.main-content li {
+    color: #1b3b5a;
+    font-size: 1.08em;
+    line-height: 1.7;
+    font-weight: 700;
+    font-family: Arial, 'Segoe UI', sans-serif;
+}
+
+.main-content ul {
+    max-width: 700px;
+    margin: 24px auto;
+    padding-left: 24px;
+}
+
+.main-content li {
+    margin-bottom: 10px;
+}
+
+/* Hero Image */
+.hero-image {
+    display: block;
+    margin: 0 auto 30px auto;
+    max-width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+}
+
+/* Responsive Design: Tablet */
 @media (max-width: 1000px) {
     .main-content {
         max-width: 98vw;
         padding: 24px 3vw;
-    }
-    .ships-list {
-        gap: 16px;
-    }
-    .ship-card {
-        width: 45vw;
-        min-width: 180px;
-        max-width: 320px;
     }
     nav {
         gap: 24px;
     }
 }
 
-@media (max-width: 700px) {
-    #header {
-        padding: 10px 0;
-    }
-    nav {
-        flex-direction: column;
-        align-items: center;
-        gap: 8px;
-        width: 100%;
-    }
-    nav a {
-        font-size: 1em;
-        padding: 8px 0;
-        width: 100%;
-        text-align: center;
-        border-radius: 4px;
-        transition: background 0.2s, color 0.2s;
-    }
-    nav a:hover {
-        background: #ffd700;
-        color: #0a2740;
-    }
-    .main-content {
-        padding: 12px 1vw;
-    }
-    .ships-list {
-        flex-direction: column;
-        align-items: center;
-        gap: 12px;
-    }
-    .ship-card {
-        width: 95vw;
-        min-width: unset;
-        max-width: 99vw;
-        padding: 12px 6px;
-    }
-    h1 {
-        font-size: 1.5em;
-    }
-    .featured-ships h2 {
-        font-size: 1.1em;
-    }
-    .hero-image {
-        height: auto;
-        max-height: 180px;
-        object-fit: cover;
-    }
-}
-
+/* Responsive Design: Mobile */
 @media (max-width: 700px) {
     #header {
         padding: 10px 0;
@@ -143,5 +157,23 @@ nav a:hover::after {
     nav a:hover {
         background: #ffd700;
         color: #0a2740;
+    }
+    .main-content {
+        padding: 16px 8px 16px 8px;
+        margin-top: 80px;
+    }
+    h1 {
+        font-size: 1.5em;
+    }
+    h2 {
+        font-size: 1.1em;
+    }
+    .hero-image {
+        height: auto;
+        max-height: 180px;
+        object-fit: cover;
+    }
+    .main-content ul {
+        padding-left: 12px;
     }
 }

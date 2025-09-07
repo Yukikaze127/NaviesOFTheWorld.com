@@ -24,6 +24,7 @@ nav {
     display: flex;
     justify-content: center;
     gap: 40px;
+    align-items: center;
 }
 
 nav a {
@@ -64,25 +65,68 @@ nav a:hover::after {
     box-shadow: 0 4px 16px rgba(0,0,0,0.10);
 }
 
-h1 {
+.main-content2 {
+    max-width: 900px;
+    margin: 50px auto 0 auto;
+    background-color: rgba(255,255,255,0.97);
+    padding: 40px 32px 32px 32px;
+    border-radius: 10px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.10);
+    border: 3px solid #ffd700; /* Yellow border */
+    font-weight: 700;
+    font-family: Arial, 'Segoe UI', sans-serif;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+    font-family: Arial, 'Segoe UI', sans-serif;
     color: #0a2740;
     text-align: center;
-    font-size: 2.5em;
+    font-weight: 800;
     margin-bottom: 0.3em;
     letter-spacing: 2px;
 }
-
+h1 {
+    font-size: 2.5em;
+}
+h2 {
+    color: #1b3b5a;
+    font-size: 2em;
+    margin: 32px 0 18px 0;
+}
 .subtitle {
     text-align: center;
     color: #1b3b5a;
     font-size: 1.3em;
     margin-bottom: 1.5em;
+    font-weight: 700;
+    font-family: Arial, 'Segoe UI', sans-serif;
 }
 
-p {
-    color: #333;
-    font-size: 1.15em;
+/* Paragraphs and Lists */
+.main-content p,
+.main-content ul,
+.main-content li,
+.main-content2 p,
+.main-content2 ul,
+.main-content2 li {
+    color: #1b3b5a;
+    font-size: 1.08em;
     line-height: 1.7;
+    font-weight: 700;
+    font-family: Arial, 'Segoe UI', sans-serif;
+}
+
+.main-content ul,
+.main-content2 ul {
+    max-width: 700px;
+    margin: 24px auto;
+    padding-left: 24px;
+}
+
+.main-content li,
+.main-content2 li {
+    margin-bottom: 10px;
 }
 
 /* Hero Image */
@@ -207,7 +251,8 @@ p {
 
 /* Responsive Design: Tablet */
 @media (max-width: 1000px) {
-    .main-content {
+    .main-content,
+    .main-content2 {
         max-width: 98vw;
         padding: 24px 3vw;
     }
@@ -248,7 +293,8 @@ p {
         background: #ffd700;
         color: #0a2740;
     }
-    .main-content {
+    .main-content,
+    .main-content2 {
         padding: 16px 8px 16px 8px;
         margin-top: 80px;
     }
@@ -256,10 +302,7 @@ p {
         padding: 24px 6px 16px 6px;
         margin-top: 24px;
     }
-    
-    
-    @media (max-width: 700px) {
-        .ships-list {
+    .ships-list {
         flex-direction: column;
         align-items: center;
         gap: 5%;
@@ -270,12 +313,7 @@ p {
         min-width: 250px;
         max-width: 500px;
         padding: 5%;
-       box-sizing: border-box;
-    }
-    
-}
-
-        
+        box-sizing: border-box;
     }
     h1 {
         font-size: 1.5em;
@@ -288,11 +326,19 @@ p {
         max-height: 180px;
         object-fit: cover;
     }
+    .main-content ul,
+    .main-content2 ul {
+        padding-left: 12px;
+    }
+}
+
+/* --- DARK MODE STYLES: Place these at the very end, outside any media query --- */
 body.dark-mode,
 body.dark-mode p,
 body.dark-mode li,
 body.dark-mode .subtitle,
 body.dark-mode .main-content,
+body.dark-mode .main-content2,
 body.dark-mode .featured-ships,
 body.dark-mode .ship-card,
 body.dark-mode .site-footer {
@@ -304,6 +350,7 @@ body.dark-mode {
 }
 
 body.dark-mode .main-content,
+body.dark-mode .main-content2,
 body.dark-mode .featured-ships,
 body.dark-mode .ship-card,
 body.dark-mode .site-footer {
@@ -345,4 +392,45 @@ body.dark-mode .site-footer {
 body.dark-mode #theme-toggle {
     background: #0a2740 !important;
     color: #ffd700 !important;
+}
+
+.site-footer {
+    background: rgba(255,255,255,0.93);
+    color: #1b3b5a;
+    text-align: center;
+    padding: 18px 0 10px 0;
+    font-size: 1.05em;
+    margin-top: 40px;
+    border-top: 2px solid #ffd700;
+    letter-spacing: 1px;
+    box-shadow: 0 -2px 8px rgba(0,0,0,0.10);
+}
+
+.site-footer a {
+    color: #0a2740;
+    text-decoration: none;
+    margin: 0 6px;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.site-footer a:hover {
+    color: #ffd700;
+    text-decoration: underline;
+}
+
+/* Dark mode for footer */
+body.dark-mode .site-footer {
+    background: rgba(20, 30, 50, 0.97) !important;
+    color: #fff !important;
+    border-top: 2px solid #ffd700 !important;
+}
+
+body.dark-mode .site-footer a {
+    color: #ffd700 !important;
+}
+
+body.dark-mode .site-footer a:hover {
+    color: #fff !important;
+    text-decoration: underline;
 }

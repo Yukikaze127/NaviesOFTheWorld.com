@@ -242,3 +242,44 @@ body.dark-mode .main-content2 {
     color: #fff !important;
     border-color: #ffd700 !important;
 }
+
+.site-footer {
+    background: rgba(255,255,255,0.93);
+    color: #1b3b5a;
+    text-align: center;
+    padding: 18px 0 10px 0;
+    font-size: 1.05em;
+    margin-top: 40px;
+    border-top: 2px solid #ffd700;
+    letter-spacing: 1px;
+    box-shadow: 0 -2px 8px rgba(0,0,0,0.10);
+}
+
+.site-footer a {
+    color: #0a2740;
+    text-decoration: none;
+    margin: 0 6px;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.site-footer a:hover {
+    color: #ffd700;
+    text-decoration: underline;
+}
+
+/* Dark mode for footer */
+body.dark-mode .site-footer {
+    background: rgba(20, 30, 50, 0.97) !important;
+    color: #fff !important;
+    border-top: 2px solid #ffd700 !important;
+}
+
+body.dark-mode .site-footer a {
+    color: #ffd700 !important;
+}
+
+body.dark-mode .site-footer a:hover {
+    color: #fff !important;
+    text-decoration: underline;
+}

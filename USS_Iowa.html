@@ -10,12 +10,28 @@
 <body>
 <header id="header">
         <nav>
-            <a href ="index.html">Homepage</a>
-            <a href="naval-history.html">Naval History</a>
-            <a href="ship-classes.html">Ship Classes</a>
-            <a href="nations.html">Nations</a>
-            <a href="media.html">Media</a>
-        </nav>
+    <a href ="index.html">Homepage</a>
+    <a href="naval-history.html">Naval History</a>
+    <a href="ship-classes.html">Ship Classes</a>
+    <a href="nations.html">Nations</a>
+    <a href="media.html">Media</a>
+    <button id="theme-toggle" type="button" style="
+        background: #ffd700;
+        color: #0a2740;
+        border: none;
+        border-radius: 6px;
+        padding: 8px 18px;
+        font-size: 1.1em;
+        font-family: inherit;
+        font-weight: 700;
+        cursor: pointer;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+        transition: background 0.2s, color 0.2s;
+        margin-left: 24px;
+    ">
+        Toggle Dark Mode
+    </button>
+</nav>
     </header>
 
      <main class="main-content2">
@@ -361,7 +377,7 @@ Her armor, up to 12 inches thick at the belt, protected her vitals against enemy
     alt="USS Iowa BB-61 at Sea"
     style="display:block; width:100%; max-width:100%; height:auto; border-radius:8px; margin:0 auto 30px auto; box-shadow:0 2px 8px rgba(0,0,0,0.10);" />
 
-         <h1 style="text-align: center; font-weight: 700; color: #1b3b5a;">THE END!</h1>
+         <h1>THE END!</h1>
 
                     
 </main>
@@ -403,7 +419,27 @@ Her armor, up to 12 inches thick at the belt, protected her vitals against enemy
             &copy; 2025 Navies of the World. All Rights Reserved / designed by Yukikaze
         </div>
     </footer>
+<script>
+const toggleBtn = document.getElementById('theme-toggle');
+const body = document.body;
 
+// Set initial state from localStorage
+if(localStorage.getItem('theme') === 'dark') {
+    body.classList.add('dark-mode');
+    toggleBtn.textContent = 'Toggle Light Mode';
+}
+
+toggleBtn.addEventListener('click', () => {
+    body.classList.toggle('dark-mode');
+    if(body.classList.contains('dark-mode')) {
+        toggleBtn.textContent = 'Toggle Light Mode';
+        localStorage.setItem('theme', 'dark');
+    } else {
+        toggleBtn.textContent = 'Toggle Dark Mode';
+        localStorage.setItem('theme', 'light');
+    }
+});
+</script>
 
 </body>
 </html>

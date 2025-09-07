@@ -177,3 +177,68 @@ h2 {
         padding-left: 12px;
     }
 }
+
+body.dark-mode,
+body.dark-mode p,
+body.dark-mode li,
+body.dark-mode .subtitle,
+body.dark-mode .main-content,
+body.dark-mode .featured-ships,
+body.dark-mode .ship-card,
+body.dark-mode .site-footer {
+    color: #fff !important;
+}
+
+body.dark-mode {
+    background: linear-gradient(135deg, #101820 0%, #22334a 100%);
+}
+
+body.dark-mode .main-content,
+body.dark-mode .featured-ships,
+body.dark-mode .ship-card,
+body.dark-mode .site-footer {
+    background: rgba(20, 30, 50, 0.97) !important;
+    border-color: #ffd700 !important;
+}
+
+body.dark-mode h1, 
+body.dark-mode h2, 
+body.dark-mode h3, 
+body.dark-mode h4, 
+body.dark-mode h5, 
+body.dark-mode h6 {
+    color: #ffd700 !important;
+}
+
+body.dark-mode nav {
+    background: rgba(17, 41, 77, 0.7);
+}
+
+body.dark-mode nav a {
+    color: #ffd700 !important;
+}
+
+body.dark-mode nav a:hover {
+    color: #fff !important;
+    background: #ffd70022;
+}
+
+body.dark-mode .ship-link {
+    color: #ffd700 !important;
+}
+body.dark-mode .ship-link:hover {
+    color: #fff !important;
+}
+body.dark-mode .site-footer {
+    border-top: 2px solid #ffd700 !important;
+}
+body.dark-mode #theme-toggle {
+    background: #0a2740 !important;
+    color: #ffd700 !important;
+}
+
+body.dark-mode .main-content2 {
+    background: rgba(20, 30, 50, 0.97) !important;
+    color: #fff !important;
+    border-color: #ffd700 !important;
+}

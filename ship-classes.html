@@ -4,18 +4,74 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Navies of the World - Home</title>
-    <link rel="stylesheet" href="ship-classes.css">
+    <title>Navies of the World - KMS Bismarck</title>
+    <link rel="stylesheet" href="iowastyle.css">
 </head>
 <body>
-   <header id="header">
+    <header id="header">
         <nav>
-            <a href ="index.html">Homepage</a>
+            <a href="index.html">Homepage</a>
             <a href="naval-history.html">Naval History</a>
             <a href="ship-classes.html">Ship Classes</a>
             <a href="nations.html">Nations</a>
             <a href="media.html">Media</a>
+            <button id="theme-toggle" type="button" style="
+                background: #ffd700;
+                color: #0a2740;
+                border: none;
+                border-radius: 6px;
+                padding: 8px 18px;
+                font-size: 1.1em;
+                font-family: inherit;
+                font-weight: 700;
+                cursor: pointer;
+                box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+                transition: background 0.2s, color 0.2s;
+                margin-left: 24px;
+            ">
+                Toggle Dark Mode
+            </button>
         </nav>
     </header>
+
+    <main class="main-content2">
+        <!-- Page content goes here -->
+    </main>
+
+    <footer class="site-footer">
+        <div>
+            <strong>Contact:</strong>
+            <a href="mailto:">Email</a>
+            &nbsp;|&nbsp;
+            <a href="#" target="_blank">Twitter</a>
+            &nbsp;|&nbsp;
+            <a href="#" target="_blank">Discord</a>
+        </div>
+        <div style="margin-top:8px;">
+            &copy; 2025 Navies of the World. All Rights Reserved / designed by Yukikaze
+        </div>
+    </footer>
+
+    <script>
+    const toggleBtn = document.getElementById('theme-toggle');
+    const body = document.body;
+
+    // Set initial state from localStorage
+    if(localStorage.getItem('theme') === 'dark') {
+        body.classList.add('dark-mode');
+        toggleBtn.textContent = 'Toggle Light Mode';
+    }
+
+    toggleBtn.addEventListener('click', () => {
+        body.classList.toggle('dark-mode');
+        if(body.classList.contains('dark-mode')) {
+            toggleBtn.textContent = 'Toggle Light Mode';
+            localStorage.setItem('theme', 'dark');
+        } else {
+            toggleBtn.textContent = 'Toggle Dark Mode';
+            localStorage.setItem('theme', 'light');
+        }
+    });
+    </script>
 </body>
 </html>
